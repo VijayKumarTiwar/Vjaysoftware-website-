@@ -1,42 +1,22 @@
-import uvicorn
+#!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
+import os
 import sys
-import getpass
-from database import engine, SessionLocal
-from models import Base, User
-from auth_utils import get_password_hash
 
-# Create tables
-Base.metadata.create_all(bind=engine)
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        command = sys.argv[1]
-        
-        if command == "runserver":
-            print("Starting FastAPI server via manage.py compatibility script...")
-            uvicorn.run("main:app", host="127.0.0.1", port=8001, reload=True)
-            
-        elif command == "createsuperuser":
-            print("Creating Superuser...")
-            username = input("Username: ")
-            email = input("Email: ")
-            password = getpass.getpass("Password: ")
-            
-            db = SessionLocal()
-            hashed_password = get_password_hash(password)
-            user = User(
-                username=username,
-                email=email,
-                hashed_password=hashed_password,
-                is_active=True,
-                is_superuser=True
-            )
-            db.add(user)
-            db.commit()
-            db.close()
-            print(f"Superuser '{username}' created successfully!")
-            
-        else:
-            print(f"Unknown command: {command}")
-    else:
-        print("Usage: python manage.py [runserver|createsuperuser]")
+def main():
+    """Run administrative tasks."""
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
+    execute_from_command_line(sys.argv)
+
+
+if __name__ == '__main__':
+    main()

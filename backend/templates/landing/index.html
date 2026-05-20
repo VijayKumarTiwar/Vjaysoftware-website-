@@ -1,0 +1,406 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bariton - IT Machine Learning Python Django Template</title>
+    <meta name="description" content="IT Machine Learning Python Django Template">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'landing/css/style.css' %}">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar-area">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="/">
+                    <span class="logo-text">BARI<span>TON</span></span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a class="cart-btn" href="#"><i class="fa-solid fa-cart-shopping"></i><span class="badge">1</span></a>
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <a class="btn btn-primary" href="#contact">Schedule a Demo</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Banner Section -->
+    <section class="hero-section">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="tagline">Next-Generation AI Orchestration</span>
+                <h1>World’s Leading Machine Learning Company</h1>
+                <p>ML today is able to supply a needful amount of help, information, and a positive experience of maintaining intimacy with customers. Eventually, chatbot ideas bring a pleasant experience of all these qualities into the conversation.</p>
+                <div class="btn-box">
+                    <a class="btn btn-primary" href="#contact">Schedule a Demo</a>
+                    <a class="btn btn-secondary" href="#about">Get Started Free</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="image-wrapper img-1">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&width=600" alt="AI Research">
+                    </div>
+                    <div class="image-wrapper img-2">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&width=600" alt="Team Meeting">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="tagline">SMART APPROACH</span>
+                    <h2>Engaging New Audiences Through Smart Approach</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                    <a class="btn btn-primary" href="#">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="tagline">OUR SERVICES</span>
+                <h2>We Offer Professional Solutions</h2>
+                <p>We leverage cutting edge neural networks and data science architectures to solve complex business operations.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Data Analysts</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Automatic Optimization</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Security & Surveillance</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Healthcare & Manufacturing</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+                    <h3>Software Engineers</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>IT Professionals</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Webinar Section -->
+    <section class="webinar-section">
+        <div class="webinar-grid">
+            <div class="webinar-content">
+                <h2>Check Out Our Latest Webinar</h2>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                <a class="btn btn-primary" href="#">Watch More</a>
+            </div>
+            <div class="webinar-video" style="background-image: linear-gradient(rgba(11, 15, 25, 0.4), rgba(11, 15, 25, 0.4)), url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&width=1200');">
+                <a href="#" class="play-btn"><i class="fa-solid fa-play"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="partners-logos">
+                <div class="logo-item"><h3>TechCorp</h3></div>
+                <div class="logo-item"><h3>DataInc</h3></div>
+                <div class="logo-item"><h3>Innovate</h3></div>
+                <div class="logo-item"><h3>ApexAI</h3></div>
+                <div class="logo-item"><h3>CloudSystems</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-card">
+                <p>"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour predefined words which don't look."</p>
+                <div class="client-info">
+                    <img class="client-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&width=100" alt="Filip Luis">
+                    <div class="client-details">
+                        <h3>Filip Luis</h3>
+                        <span>Founder & CEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="tagline">PRICING PLANS</span>
+                <h2>Our Pricing Plan</h2>
+                <p>Simple and transparent pricing plans for teams of all sizes.</p>
+            </div>
+
+            <div class="tab-toggle">
+                <span class="toggle-label active" id="monthly-label">Monthly Plan</span>
+                <div class="toggle-switch" id="toggle-switch">
+                    <div class="switch-nob"></div>
+                </div>
+                <span class="toggle-label" id="yearly-label">Yearly Plan</span>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Free</h3>
+                        <p>Get your business up and running</p>
+                    </div>
+                    <div class="price"><span class="currency">$</span><span class="amount" data-monthly="0" data-yearly="0">0</span><span class="period">/Monthly</span></div>
+                    <a class="btn btn-secondary" href="#">Get Started Free</a>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Drag & Drop Builder</li>
+                        <li><i class="fa-solid fa-check"></i> Lead Generation & Sales</li>
+                        <li><i class="fa-solid fa-check"></i> Boot & Digital Assistants</li>
+                        <li><i class="fa-solid fa-check"></i> Customer Service</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Up to 1000 Subscribers</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Unlimited Broadcasts</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card active">
+                    <div class="popular-badge">Popular</div>
+                    <div class="card-header">
+                        <h3>Pro</h3>
+                        <p>Get your business up and running</p>
+                    </div>
+                    <div class="price"><span class="currency">$</span><span class="amount" data-monthly="149" data-yearly="119">149</span><span class="period">/Monthly</span></div>
+                    <a class="btn btn-primary" href="#">Get Started Free</a>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Drag & Drop Builder</li>
+                        <li><i class="fa-solid fa-check"></i> Lead Generation & Sales</li>
+                        <li><i class="fa-solid fa-check"></i> Boot & Digital Assistants</li>
+                        <li><i class="fa-solid fa-check"></i> Customer Service</li>
+                        <li><i class="fa-solid fa-check"></i> Up to 1000 Subscribers</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Unlimited Broadcasts</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Premium</h3>
+                        <p>Get your business up and running</p>
+                    </div>
+                    <div class="price"><span class="currency">$</span><span class="amount" data-monthly="179" data-yearly="143">179</span><span class="period">/Monthly</span></div>
+                    <a class="btn btn-secondary" href="#">Get Started Free</a>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Drag & Drop Builder</li>
+                        <li><i class="fa-solid fa-check"></i> Lead Generation & Sales</li>
+                        <li><i class="fa-solid fa-check"></i> Boot & Digital Assistants</li>
+                        <li><i class="fa-solid fa-check"></i> Customer Service</li>
+                        <li><i class="fa-solid fa-check"></i> Up to 1000 Subscribers</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Broadcasts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="tagline">LATEST NEWS</span>
+                <h2>Our Recent News</h2>
+                <p>Read about the latest developments in AI and machine learning orchestration.</p>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <div class="post-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&width=600" alt="Tech">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta"><span>Admin</span> • <span>March 10, 2026</span></div>
+                        <h3><a href="#">Making Peace With The Feast Or Famine Of Freelancing</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+                        <a class="read-more" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-post">
+                    <div class="post-img">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&width=600" alt="Cyber">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta"><span>Admin</span> • <span>March 11, 2026</span></div>
+                        <h3><a href="#">I Used The Web For A Day On A 50 MB Budget</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+                        <a class="read-more" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-post">
+                    <div class="post-img">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&width=600" alt="Security">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta"><span>Admin</span> • <span>March 12, 2026</span></div>
+                        <h3><a href="#">Here are the 5 most telling signs of micromanagement</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+                        <a class="read-more" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trial Section / Contact -->
+    <section id="contact" class="trial-section">
+        <div class="trial-grid">
+            <div class="trial-img" style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&width=1200');"></div>
+            <div class="trial-content">
+                <h2>Start your free trial</h2>
+                <form class="trial-form">
+                    <input type="email" placeholder="Enter your business email here" required>
+                    <button type="submit" class="btn btn-primary">Sign Up Free</button>
+                </form>
+                <p>Test out the Machine Learning features for 14 days, no credit card required.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget about-widget">
+                    <span class="logo-text">BARI<span>TON</span></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget links-widget">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Product Engineering</a></li>
+                        <li><a href="#">UX/UI Design</a></li>
+                        <li><a href="#">Big Data Analysis</a></li>
+                        <li><a href="#">Desktop Applications</a></li>
+                        <li><a href="#">Mobile Applications</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget links-widget">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget contact-widget">
+                    <h3>Contacts</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 2750 Quadra Street, Victoria, Canada</li>
+                        <li><i class="fa-solid fa-envelope"></i> support@bariton.ai</li>
+                        <li><i class="fa-solid fa-phone"></i> +44 587 154 756</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright-area">
+                <p>Copyright © 2026 Bariton. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Toggle -->
+    <script>
+        const toggleSwitch = document.getElementById('toggle-switch');
+        const switchNob = document.querySelector('.switch-nob');
+        const monthlyLabel = document.getElementById('monthly-label');
+        const yearlyLabel = document.getElementById('yearly-label');
+        const priceAmounts = document.querySelectorAll('.amount');
+        const periodTexts = document.querySelectorAll('.period');
+
+        let isYearly = false;
+
+        toggleSwitch.addEventListener('click', () => {
+            isYearly = !isYearly;
+            
+            if (isYearly) {
+                switchNob.style.left = 'calc(100% - 24px)';
+                monthlyLabel.classList.remove('active');
+                yearlyLabel.classList.add('active');
+                
+                priceAmounts.forEach(amount => {
+                    amount.textContent = amount.getAttribute('data-yearly');
+                });
+                periodTexts.forEach(period => {
+                    period.textContent = '/Yearly';
+                });
+            } else {
+                switchNob.style.left = '4px';
+                monthlyLabel.classList.add('active');
+                yearlyLabel.classList.remove('active');
+                
+                priceAmounts.forEach(amount => {
+                    amount.textContent = amount.getAttribute('data-monthly');
+                });
+                periodTexts.forEach(period => {
+                    period.textContent = '/Monthly';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
