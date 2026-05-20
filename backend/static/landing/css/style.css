@@ -7,12 +7,14 @@
     --primary: #ff6b35;
     --primary-hover: #e55a2b;
     --primary-rgb: 255, 107, 53;
-    --bg-dark: #080b11;
-    --bg-card: rgba(17, 24, 39, 0.6);
-    --bg-card-hover: rgba(26, 36, 56, 0.85);
-    --border-color: rgba(255, 255, 255, 0.08);
-    --text-main: #f3f4f6;
-    --text-muted: #9ca3af;
+    --bg-dark: #ffffff;
+    --bg-dark-alt: #f8fafc;
+    --bg-card: #f1f5f9;
+    --bg-card-hover: #e2e8f0;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-contrast: #0f172a;
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -29,7 +31,7 @@ html {
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: #ffffff;
     color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -50,7 +52,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(8, 11, 17, 0.75);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
@@ -69,7 +71,7 @@ body {
     font-weight: 800;
     font-size: 24px;
     letter-spacing: 1.5px;
-    color: #ffffff;
+    color: var(--text-contrast);
     text-decoration: none;
 }
 
@@ -94,7 +96,7 @@ body {
 }
 
 .nav-link:hover, .nav-link.active {
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 .nav-link::after {
@@ -126,7 +128,7 @@ body {
 }
 
 .cart-btn:hover {
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 .cart-btn .badge {
@@ -151,7 +153,7 @@ body {
 }
 
 .search-btn:hover {
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 /* --- Buttons --- */
@@ -183,7 +185,7 @@ body {
 
 .btn-secondary {
     background: transparent;
-    color: #ffffff;
+    color: var(--text-contrast);
     border: 1px solid var(--border-color);
 }
 
@@ -249,7 +251,7 @@ body {
     font-size: 56px;
     font-weight: 800;
     line-height: 1.15;
-    color: #ffffff;
+    color: var(--text-contrast);
     margin-bottom: 24px;
     letter-spacing: -1px;
 }
@@ -269,7 +271,7 @@ body {
 /* --- About Section --- */
 .about-section {
     padding: 120px 0;
-    background: #0b0f19;
+    background: var(--bg-dark-alt);
 }
 
 .about-grid {
@@ -315,7 +317,7 @@ body {
     font-weight: 700;
     line-height: 1.25;
     margin-bottom: 24px;
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 .about-content p {
@@ -345,7 +347,7 @@ body {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 16px;
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 .section-title p {
@@ -418,7 +420,7 @@ body {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 16px;
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 .service-card p {
@@ -428,7 +430,7 @@ body {
 
 /* --- Webinar Section --- */
 .webinar-section {
-    background: #0b0f19;
+    background: var(--bg-dark-alt);
 }
 
 .webinar-grid {
@@ -449,7 +451,7 @@ body {
     font-family: var(--font-heading);
     font-size: 38px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-contrast);
     margin-bottom: 20px;
 }
 
@@ -473,8 +475,8 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: #ffffff;
-    color: var(--bg-dark);
+    background: var(--primary);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -533,7 +535,7 @@ body {
 .feedback-card p {
     font-size: 22px;
     font-style: italic;
-    color: #ffffff;
+    color: var(--text-contrast);
     line-height: 1.6;
     margin-bottom: 40px;
 }
@@ -560,7 +562,7 @@ body {
 .client-details h3 {
     font-size: 18px;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 .client-details span {
@@ -571,7 +573,7 @@ body {
 /* --- Pricing Section --- */
 .pricing-section {
     padding: 120px 0;
-    background: #0b0f19;
+    background: var(--bg-dark-alt);
 }
 
 .tab-toggle {
@@ -590,7 +592,7 @@ body {
 }
 
 .toggle-label.active {
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 .toggle-switch {
@@ -661,7 +663,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 8px;
-    color: #ffffff;
+    color: var(--text-contrast);
 }
 
 .card-header p {
@@ -674,7 +676,7 @@ body {
     font-size: 48px;
     font-family: var(--font-heading);
     font-weight: 800;
-    color: #ffffff;
+    color: var(--text-contrast);
     margin-bottom: 30px;
     display: flex;
     align-items: baseline;
@@ -789,7 +791,7 @@ body {
 }
 
 .post-content h3 a {
-    color: #ffffff;
+    color: var(--text-contrast);
     text-decoration: none;
     transition: var(--transition);
 }
@@ -816,13 +818,13 @@ body {
 }
 
 .read-more:hover {
-    color: #ffffff;
+    color: var(--primary);
     transform: translateX(4px);
 }
 
 /* --- Trial/Contact Section --- */
 .trial-section {
-    background: #0b0f19;
+    background: var(--bg-dark-alt);
 }
 
 .trial-grid {
@@ -848,7 +850,7 @@ body {
     font-family: var(--font-heading);
     font-size: 40px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-contrast);
     margin-bottom: 16px;
 }
 
@@ -861,11 +863,11 @@ body {
 
 .trial-form input {
     flex: 1;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-dark);
     border: 1px solid var(--border-color);
     border-radius: 30px;
     padding: 16px 24px;
-    color: #ffffff;
+    color: var(--text-main);
     font-size: 15px;
     outline: none;
     transition: var(--transition);
@@ -873,7 +875,7 @@ body {
 
 .trial-form input:focus {
     border-color: var(--primary);
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--bg-card);
 }
 
 .trial-form .btn {
@@ -902,7 +904,7 @@ body {
     font-family: var(--font-heading);
     font-size: 18px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-contrast);
     margin-bottom: 24px;
 }
 
@@ -1023,7 +1025,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #0b0f19;
+    background-color: var(--bg-dark-alt);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 16px 0;
