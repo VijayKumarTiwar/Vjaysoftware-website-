@@ -10,6 +10,12 @@ def home_view(request):
     """
     return render(request, 'landing/index.html')
 
+def home_demo_2_view(request):
+    """
+    Renders the Home Demo 2 layout.
+    """
+    return render(request, 'landing/index_two.html')
+
 @csrf_exempt
 async def api_estimate_view(request):
     """
