@@ -15,6 +15,347 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'landing/css/style.css' %}">
+    
+    <!-- Custom Styles for Home Demo 2 -->
+    <style>
+        /* Orange/Primary accents and button overwrites */
+        :root {
+            --primary: #ff6b35; /* Orange primary color matching the screenshots */
+            --primary-rgb: 255, 107, 53;
+        }
+
+        /* 2-Column Hero layout */
+        .hero-demo-2 {
+            padding: 180px 0 100px 0;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.08) 0%, rgba(255, 255, 255, 0) 60%);
+        }
+        .hero-demo-2 .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-demo-2 .hero-content {
+            max-width: 100%;
+            text-align: left;
+        }
+        .hero-demo-2 .hero-content h1 {
+            font-size: 58px;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text-contrast);
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+        .hero-demo-2 .hero-content p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+        .hero-demo-2 .hero-image img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+            animation: floatAnimation 6s ease-in-out infinite;
+        }
+        @keyframes floatAnimation {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* Buttons & Underlined Links */
+        .btn {
+            border-radius: 30px;
+            padding: 16px 36px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #e0531f;
+            border-color: #e0531f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.2);
+        }
+        .btn-underlined {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-contrast);
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-color: var(--primary);
+            text-decoration-thickness: 2.5px;
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 0;
+            transition: var(--transition);
+        }
+        .btn-underlined:hover {
+            color: var(--primary);
+        }
+
+        /* Solutions Section Cards styling */
+        .featured-solutions-section {
+            background: #ffffff;
+        }
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .solution-card {
+            background: #f4f6fc; /* eef2ff lavender tint */
+            border: none;
+            border-radius: 20px;
+            padding: 50px 35px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .solution-card:hover {
+            background: #ffffff;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+        .solution-card .icon-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            background: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+        .solution-card:hover .icon-box {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.2);
+        }
+        .solution-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-contrast);
+            margin-bottom: 15px;
+        }
+        .solution-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .solution-card .read-more {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+            transition: var(--transition);
+        }
+        .solution-card .read-more:hover {
+            color: var(--text-contrast);
+        }
+
+        /* About checklist styling */
+        .about-section {
+            background: #ffffff;
+            padding: 100px 0;
+        }
+        .about-list {
+            list-style: none;
+            margin: 30px 0 40px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px 20px;
+            padding-left: 0;
+        }
+        .about-list li {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-contrast);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .about-list li i {
+            width: 22px;
+            height: 22px;
+            background: var(--primary);
+            color: #ffffff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+        .about-images img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+        }
+
+        /* Services Tab Component styles */
+        .services-section {
+            background: #f8fafc;
+            padding: 100px 0;
+        }
+        .services-tabs-container {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 50px;
+            margin-top: 50px;
+            align-items: flex-start;
+        }
+        .services-tab-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .services-tab-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 22px 28px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-contrast);
+        }
+        .services-tab-item:hover {
+            transform: translateX(6px);
+            border-color: var(--primary);
+        }
+        .services-tab-item.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 12px 24px rgba(255, 107, 53, 0.15);
+        }
+        .services-tab-item .tab-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(255, 107, 53, 0.08);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+        .services-tab-item.active .tab-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        .services-tab-content-wrapper {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.015);
+            border: 1px solid var(--border-color);
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+        }
+        .services-tab-pane {
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            width: 100%;
+        }
+        .services-tab-pane.active {
+            display: grid;
+            animation: fadeIn 0.4s ease;
+        }
+        .services-tab-pane h3 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-contrast);
+            margin-bottom: 20px;
+        }
+        .services-tab-pane p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .services-tab-pane img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: contain;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1199px) {
+            .hero-demo-2 .hero-content h1 {
+                font-size: 46px;
+            }
+            .services-tabs-container {
+                grid-template-columns: 300px 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 991px) {
+            .hero-demo-2 .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-demo-2 .hero-content {
+                text-align: center;
+            }
+            .hero-demo-2 .btn-box {
+                justify-content: center;
+            }
+            .services-tabs-container {
+                grid-template-columns: 1fr;
+            }
+            .services-tab-pane {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 767px) {
+            .about-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 479px) {
+            .about-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -102,26 +443,31 @@
     </header>
 
     <!-- Hero / Banner Section -->
-    <section class="hero-section">
+    <section class="hero-section hero-demo-2">
         <div class="hero-bg-shapes">
             <div class="shape shape-1"></div>
             <div class="shape shape-2"></div>
         </div>
         <div class="container">
-            <div class="hero-content">
-                <span class="tagline">Next-Generation AI Orchestration</span>
-                <h1>World’s Leading AI & Machine Learning Company</h1>
-                <p>ML today are able to supply needful of help, information, and positive experience of maintaining intimacy with customers. Eventually, chatbot ideas bring a pleasant experience of all these qualities into the conversation.</p>
-                <div class="btn-box">
-                    <a class="btn btn-primary" href="#contact">Schedule a Demo</a>
-                    <a class="btn btn-secondary" href="#about">Get Started Free</a>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="tagline">Next-Generation AI Orchestration</span>
+                    <h1>World’s Leading AI & Machine Learning Company</h1>
+                    <p>ML today are able to supply needful of help, information, and positive experience of maintaining intimacy with customers. Eventually, chatbot ideas bring a pleasant experience of all these qualities into the conversation.</p>
+                    <div class="btn-box" style="align-items: center;">
+                        <a class="btn btn-primary" href="#contact">Schedule a Demo</a>
+                        <a class="btn-underlined" href="#about" style="margin-left: 20px;">Get Started Free</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="{% static 'landing/images/hero_ai_servers.png' %}" alt="AI & Machine Learning Infrastructure">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Solutions Section -->
-    <section class="featured-solutions-section" style="padding: 100px 0 0 0;">
+    <section class="featured-solutions-section">
         <div class="container">
             <div class="section-title">
                 <span class="tagline">OUR FEATURED SOLUTIONS</span>
@@ -130,22 +476,22 @@
             </div>
             <div class="solutions-grid">
                 <div class="solution-card">
-                    <div class="icon-box" style="width:60px; height:60px; border-radius:50%; background:rgba(255,107,53,0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:24px;"><i class="fa-solid fa-robot"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
                     <h3>Robotic Automation</h3>
                     <p>Lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam.</p>
-                    <a class="read-more" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="read-more" href="#">Read More</a>
                 </div>
                 <div class="solution-card">
-                    <div class="icon-box" style="width:60px; height:60px; border-radius:50%; background:rgba(255,107,53,0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:24px;"><i class="fa-solid fa-brain"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
                     <h3>Machine Learning</h3>
                     <p>Lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam.</p>
-                    <a class="read-more" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="read-more" href="#">Read More</a>
                 </div>
                 <div class="solution-card">
-                    <div class="icon-box" style="width:60px; height:60px; border-radius:50%; background:rgba(255,107,53,0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:24px;"><i class="fa-solid fa-gears"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
                     <h3>Cognitive Engagement</h3>
                     <p>Lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam.</p>
-                    <a class="read-more" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="read-more" href="#">Read More</a>
                 </div>
             </div>
         </div>
@@ -154,25 +500,20 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
-            <div class="about-grid">
+            <div class="about-grid" style="align-items: center;">
                 <div class="about-images">
-                    <div class="image-wrapper img-1">
-                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&width=600" alt="AI Research">
-                    </div>
-                    <div class="image-wrapper img-2">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&width=600" alt="Team Meeting">
-                    </div>
+                    <img src="{% static 'landing/images/about_network_grid.png' %}" alt="Neural Network Graph">
                 </div>
                 <div class="about-content">
                     <span class="tagline">SMART APPROACH</span>
-                    <h2>Engaging New Audiences through Smart Approach</h2>
+                    <h2>Engaging New Audiences Through Smart Approach</h2>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage.</p>
                     <ul class="about-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Classification</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Examples</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Extensions</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Extraction</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Selection</li>
+                        <li><i class="fa-solid fa-check"></i> Classification</li>
+                        <li><i class="fa-solid fa-check"></i> Examples</li>
+                        <li><i class="fa-solid fa-check"></i> Extensions</li>
+                        <li><i class="fa-solid fa-check"></i> Extraction</li>
+                        <li><i class="fa-solid fa-check"></i> Selection</li>
                     </ul>
                     <a class="btn btn-primary" href="#">Discover More</a>
                 </div>
@@ -189,36 +530,112 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>Data Analysis</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <div class="services-tabs-container">
+                <div class="services-tab-list">
+                    <div class="services-tab-item active" data-tab="tab-analysis">
+                        <div class="tab-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <span>Data Analysis</span>
+                    </div>
+                    <div class="services-tab-item" data-tab="tab-automation">
+                        <div class="tab-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <span>Automation Optimization</span>
+                    </div>
+                    <div class="services-tab-item" data-tab="tab-security">
+                        <div class="tab-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span>Security & Surveillance</span>
+                    </div>
+                    <div class="services-tab-item" data-tab="tab-health">
+                        <div class="tab-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <span>Health & Manufacturing</span>
+                    </div>
+                    <div class="services-tab-item" data-tab="tab-engineers">
+                        <div class="tab-icon"><i class="fa-solid fa-code"></i></div>
+                        <span>Software Engineers</span>
+                    </div>
+                    <div class="services-tab-item" data-tab="tab-it">
+                        <div class="tab-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <span>IT Professional</span>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Automation Optimization</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Security & Surveillance</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
-                    <h3>Health & Manufacturing</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fa-solid fa-code"></i></div>
-                    <h3>Software Engineers</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fa-solid fa-user-tie"></i></div>
-                    <h3>IT Professional</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                
+                <div class="services-tab-content-wrapper">
+                    <!-- Tab 1: Data Analysis -->
+                    <div class="services-tab-pane active" id="tab-analysis">
+                        <div class="tab-pane-content">
+                            <h3>Data Analysis</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                            <p>We leverage cutting edge neural networks and data science architectures to solve complex business operations and extract deep data insights.</p>
+                            <a href="#contact" class="btn btn-primary">Get Analysis Support</a>
+                        </div>
+                        <div class="tab-pane-image">
+                            <img src="{% static 'landing/images/services_analytics_laptop.png' %}" alt="Data Analysis Illustration">
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 2: Automation Optimization -->
+                    <div class="services-tab-pane" id="tab-automation">
+                        <div class="tab-pane-content">
+                            <h3>Automation Optimization</h3>
+                            <p>Streamline your workflows and eliminate human errors. Our automatic workflow optimization engines run 24/7 to scale your business operations seamlessly.</p>
+                            <p>Maximize your operations throughput using custom built AI pipelines tailormade for business-critical processes.</p>
+                            <a href="#contact" class="btn btn-primary">Optimize Workflows</a>
+                        </div>
+                        <div class="tab-pane-image">
+                            <img src="{% static 'landing/images/services_analytics_laptop.png' %}" alt="Automation Optimization">
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 3: Security & Surveillance -->
+                    <div class="services-tab-pane" id="tab-security">
+                        <div class="tab-pane-content">
+                            <h3>Security & Surveillance</h3>
+                            <p>Our real-time neural security monitoring detects anomalies and mitigates data/surveillance threats automatically. Protect your server rooms and physical locations.</p>
+                            <p>State-of-the-art vision models detect unauthorized access and generate alerts instantly.</p>
+                            <a href="#contact" class="btn btn-primary">Secure Systems</a>
+                        </div>
+                        <div class="tab-pane-image">
+                            <img src="{% static 'landing/images/services_analytics_laptop.png' %}" alt="Security & Surveillance">
+                        </div>
+                    </div>
+
+                    <!-- Tab 4: Health & Manufacturing -->
+                    <div class="services-tab-pane" id="tab-health">
+                        <div class="tab-pane-content">
+                            <h3>Health & Manufacturing</h3>
+                            <p>Integrating computer vision and sensor data analysis to optimize production pipelines and monitor diagnostic health in industrial manufacturing.</p>
+                            <p>Predictive maintenance saves millions in machine breakdowns and production delays.</p>
+                            <a href="#contact" class="btn btn-primary">Learn Industrial Solutions</a>
+                        </div>
+                        <div class="tab-pane-image">
+                            <img src="{% static 'landing/images/services_analytics_laptop.png' %}" alt="Health & Manufacturing">
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Software Engineers -->
+                    <div class="services-tab-pane" id="tab-engineers">
+                        <div class="tab-pane-content">
+                            <h3>Software Engineers</h3>
+                            <p>Custom software engineering to build highly scalable python and django backend systems, web endpoints, database architectures, and responsive web portals.</p>
+                            <p>High quality codebases adhering to strict industry standards and code maintenance procedures.</p>
+                            <a href="#contact" class="btn btn-primary">Hire Engineer Team</a>
+                        </div>
+                        <div class="tab-pane-image">
+                            <img src="{% static 'landing/images/services_analytics_laptop.png' %}" alt="Software Engineers">
+                        </div>
+                    </div>
+
+                    <!-- Tab 6: IT Professional -->
+                    <div class="services-tab-pane" id="tab-it">
+                        <div class="tab-pane-content">
+                            <h3>IT Professional Support</h3>
+                            <p>Round-the-clock IT management, cloud resource deployments, automated backups, security patching, and network configurations to keep your business running smoothly.</p>
+                            <p>Highly qualified IT systems specialists managing infrastructure and software setups.</p>
+                            <a href="#contact" class="btn btn-primary">Hire IT Experts</a>
+                        </div>
+                        <div class="tab-pane-image">
+                            <img src="{% static 'landing/images/services_analytics_laptop.png' %}" alt="IT Professional Support">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -613,6 +1030,29 @@
                     period.textContent = '/Monthly';
                 });
             }
+        });
+
+        // Tab Selection Logic for Services Section
+        const tabItems = document.querySelectorAll('.services-tab-item');
+        const tabPanes = document.querySelectorAll('.services-tab-pane');
+
+        tabItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const targetTab = item.getAttribute('data-tab');
+                
+                // Set active class on tab items
+                tabItems.forEach(tab => tab.classList.remove('active'));
+                item.classList.add('active');
+                
+                // Show/hide corresponding tab content
+                tabPanes.forEach(pane => {
+                    if (pane.id === targetTab) {
+                        pane.classList.add('active');
+                    } else {
+                        pane.classList.remove('active');
+                    }
+                });
+            });
         });
     </script>
 </body>
