@@ -435,11 +435,25 @@ export default function Home() {
           <div className="portfolio-grid">
             {[
               {
+                bg: "#7c3aed",
+                label: "AURA.AI",
+                tag: "AI · Agentic Platform",
+                title: "Aura AI — Multi-Agent Autopilot",
+                desc: "An enterprise-grade orchestration framework running autonomous AI agents that handle customer workflow automation, auto-debugging, and predictive analytics.",
+              },
+              {
                 bg: "#0057ff",
                 label: "FINPAY",
                 tag: "Fintech · Web App",
                 title: "FinPay — Payment Gateway Platform",
                 desc: "A high-throughput payment processing platform handling 2M+ transactions/day with real-time fraud detection and multi-currency support.",
+              },
+              {
+                bg: "#0d9488",
+                label: "MEDISENSE",
+                tag: "Healthcare · ML Diagnostics",
+                title: "MediSense — AI Diagnostics Suite",
+                desc: "Computer vision and neural networks analyzing MRI and X-ray images with 98.7% diagnostic accuracy, integrated into EHR systems.",
               },
               {
                 bg: "#4f46e5",
@@ -449,18 +463,18 @@ export default function Home() {
                 desc: "End-to-end telemedicine platform with video consultations, AI symptom checker, and EHR integration for 50+ hospitals.",
               },
               {
-                bg: "#e84c1e",
-                label: "LOGIQ",
-                tag: "Logistics · Enterprise",
-                title: "LogiQ — Supply Chain Dashboard",
-                desc: "Real-time supply chain visibility platform with ML-powered demand forecasting and IoT sensor integration for FMCG clients.",
+                bg: "#ea580c",
+                label: "NEURATRADE",
+                tag: "Quantitative Finance · Deep Learning",
+                title: "NeuraTrade — Algorithmic Trade Bot",
+                desc: "Reinforcement learning bot processing terabytes of real-time market data to execute predictive trades with zero latency.",
               },
               {
-                bg: "#166534",
-                label: "EDUVAULT",
-                tag: "EdTech · SaaS",
-                title: "EduVault — Learning Management System",
-                desc: "Scalable LMS serving 200K+ students with live classes, adaptive assessments, and analytics for educators.",
+                bg: "#e84c1e",
+                label: "LOGIQ",
+                tag: "Logistics · ML Forecasting",
+                title: "LogiQ — Intelligent Supply Chain",
+                desc: "Real-time supply chain visibility platform with ML-powered demand forecasting and IoT sensor integration for FMCG clients.",
               },
             ].map((port) => (
               <div key={port.label} className="portfolio-card">

@@ -31,6 +31,9 @@ export default function LoginPage() {
       <div className="login-bg-shape login-bg-shape-2"></div>
       <div className="login-bg-shape login-bg-shape-3"></div>
 
+      {/* Elegant background watermark */}
+      <div className="login-bg-watermark">VJAY SOFTWARE</div>
+
       <div className="login-card">
         {/* Top gradient header */}
         <div className="login-header">
