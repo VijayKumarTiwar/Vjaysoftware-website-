@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - VjaySoftware AI</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style for Coming Soon -->
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --primary-rgb: 255, 107, 53;
+            --secondary: #6366f1;
+            --background-dark: #080b11;
+            --background-card: rgba(255, 255, 255, 0.03);
+            --text-contrast: #ffffff;
+            --text-muted: #8a99ad;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--background-dark);
+            color: var(--text-contrast);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Glow Backgrounds */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(140px);
+            opacity: 0.35;
+            z-index: 1;
+        }
+
+        .glow-1 {
+            top: -10%;
+            left: -10%;
+            width: 45vw;
+            height: 45vw;
+            background: radial-gradient(circle, rgba(var(--primary-rgb), 0.3) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        .glow-2 {
+            bottom: -15%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        /* Card Container */
+        .coming-soon-container {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            width: 90%;
+            background: var(--background-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-contrast);
+            text-decoration: none;
+            margin-bottom: 40px;
+            display: inline-block;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 46px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Countdown Grid */
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 20px 10px;
+        }
+
+        .countdown-item h3 {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-contrast);
+        }
+
+        .countdown-item span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* Form */
+        .signup-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+        }
+
+        .signup-form input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            padding: 15px 25px;
+            color: var(--text-contrast);
+            font-family: var(--font-body);
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .signup-form input:focus {
+            border-color: var(--primary);
+        }
+
+        .signup-form button {
+            background: var(--primary);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 0 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .signup-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .back-home:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            .coming-soon-container {
+                padding: 40px 20px;
+            }
+            .countdown-grid {
+                gap: 10px;
+            }
+            .countdown-item h3 {
+                font-size: 24px;
+            }
+            .signup-form {
+                flex-direction: column;
+            }
+            .signup-form button {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <div class="coming-soon-container">
+        <a href="/" class="logo">Vjay<span>Software</span></a>
+        <h1>Something <span class="highlight">Revolutionary</span> is Coming</h1>
+        <p>We are building the next generation of automated agentic workflows and advanced machine learning infrastructure. Stay tuned for our launch!</p>
+        
+        <div class="countdown-grid">
+            <div class="countdown-item">
+                <h3 id="days">14</h3>
+                <span>Days</span>
+            </div>
+            <div class="countdown-item">
+                <h3 id="hours">08</h3>
+                <span>Hours</span>
+            </div>
+            <div class="countdown-item">
+                <h3 id="minutes">45</h3>
+                <span>Mins</span>
+            </div>
+            <div class="countdown-item">
+                <h3 id="seconds">12</h3>
+                <span>Secs</span>
+            </div>
+        </div>
+
+        <form class="signup-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Notify Me</button>
+        </form>
+
+        <a href="/" class="back-home"><i class="fa-solid fa-arrow-left"></i> Back to Homepage</a>
+    </div>
+
+    <script>
+        // Simple countdown logic
+        let days = 14, hours = 8, minutes = 45, seconds = 12;
+        setInterval(() => {
+            seconds--;
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                    if (hours < 0) {
+                        hours = 23;
+                        days--;
+                        if (days < 0) {
+                            days = 14;
+                        }
+                    }
+                }
+            }
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+</html>

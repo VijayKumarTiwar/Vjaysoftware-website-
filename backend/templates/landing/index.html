@@ -15,6 +15,51 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'landing/css/style.css' %}">
+    
+    <!-- Custom Styles for Home Demo 1 Hero Layout -->
+    <style>
+        .hero-section .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-section .hero-content {
+            max-width: 100%;
+            text-align: left;
+        }
+        .hero-section .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+        .hero-section .hero-image img {
+            width: 100%;
+            height: auto;
+            max-height: 580px;
+            object-fit: contain;
+            animation: floatAnimation 6s ease-in-out infinite;
+        }
+        @keyframes floatAnimation {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        @media (max-width: 991px) {
+            .hero-section .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-section .hero-content {
+                text-align: center;
+            }
+            .hero-section .btn-box {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -32,12 +77,12 @@
                         <ul class="dropdown-menu">
                             <li class="dropdown-item"><a href="/home-demo-1/">Home Demo - 1</a></li>
                             <li class="dropdown-item"><a href="/home-demo-2/">Home Demo - 2</a></li>
-                            <li class="dropdown-item"><a href="#">Home Demo - 3</a></li>
-                            <li class="dropdown-item"><a href="#">Home Demo - 4</a></li>
-                            <li class="dropdown-item"><a href="#">Home Demo - 5</a></li>
-                            <li class="dropdown-item"><a href="#">Home Demo - 6</a></li>
-                            <li class="dropdown-item"><a href="#">Home Demo - 7</a></li>
-                            <li class="dropdown-item"><a href="#">Home Demo - 8</a></li>
+                            <li class="dropdown-item"><a href="/home-demo-3/">Home Demo - 3</a></li>
+                            <li class="dropdown-item"><a href="/home-demo-4/">Home Demo - 4</a></li>
+                            <li class="dropdown-item"><a href="/home-demo-5/">Home Demo - 5</a></li>
+                            <li class="dropdown-item"><a href="/home-demo-6/">Home Demo - 6</a></li>
+                            <li class="dropdown-item"><a href="/home-demo-7/">Home Demo - 7</a></li>
+                            <li class="dropdown-item"><a href="/home-demo-8/">Home Demo - 8</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -57,9 +102,9 @@
                             <li class="dropdown-item"><a href="#">Feedback</a></li>
                             <li class="dropdown-item"><a href="#">Partner</a></li>
                             <li class="dropdown-item"><a href="#">Faq</a></li>
-                            <li class="dropdown-item"><a href="#">Coming Soon</a></li>
-                            <li class="dropdown-item"><a href="#">Terms & Conditions</a></li>
-                            <li class="dropdown-item"><a href="#">Privacy Policy</a></li>
+                            <li class="dropdown-item"><a href="/coming-soon/">Coming Soon</a></li>
+                            <li class="dropdown-item"><a href="/terms/">Terms & Conditions</a></li>
+                            <li class="dropdown-item"><a href="/privacy/">Privacy Policy</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -108,13 +153,18 @@
             <div class="shape shape-2"></div>
         </div>
         <div class="container">
-            <div class="hero-content">
-                <span class="tagline">Next-Generation AI Orchestration</span>
-                <h1>World’s Leading Machine Learning Company</h1>
-                <p>ML today is able to supply a needful amount of help, information, and a positive experience of maintaining intimacy with customers. Eventually, chatbot ideas bring a pleasant experience of all these qualities into the conversation.</p>
-                <div class="btn-box">
-                    <a class="btn btn-primary" href="#contact">Schedule a Demo</a>
-                    <a class="btn btn-secondary" href="#about">Get Started Free</a>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="tagline">Next-Generation AI Orchestration</span>
+                    <h1>World’s Leading Machine Learning Company</h1>
+                    <p>ML today is able to supply a needful amount of help, information, and a positive experience of maintaining intimacy with customers. Eventually, chatbot ideas bring a pleasant experience of all these qualities into the conversation.</p>
+                    <div class="btn-box">
+                        <a class="btn btn-primary" href="#contact">Schedule a Demo</a>
+                        <a class="btn btn-secondary" href="#about">Get Started Free</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="{% static 'landing/images/hero_ml_brain.jpg' %}" alt="Machine Learning Company" style="border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15);">
                 </div>
             </div>
         </div>
@@ -199,36 +249,79 @@
                 <a href="#" class="play-btn"><i class="fa-solid fa-play"></i></a>
             </div>
         </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section class="partners-section">
+    </section>    <!-- Hiring Process Section -->
+    <section class="hiring-process-section" style="padding: 100px 0; background: var(--background-dark); position: relative;">
         <div class="container">
-            <div class="partners-logos">
-                <div class="logo-item"><h3>TechCorp</h3></div>
-                <div class="logo-item"><h3>DataInc</h3></div>
-                <div class="logo-item"><h3>Innovate</h3></div>
-                <div class="logo-item"><h3>ApexAI</h3></div>
-                <div class="logo-item"><h3>CloudSystems</h3></div>
+            <div class="section-title" style="text-align: center; margin-bottom: 60px;">
+                <span class="tagline" style="color: var(--primary); text-transform: uppercase; font-size: 14px; font-weight: 600; letter-spacing: 2px; display: inline-block; margin-bottom: 12px;">FAST-TRACK 20-DAY LOOP</span>
+                <h2 style="font-family: var(--font-heading); font-size: 40px; font-weight: 700; color: var(--text-contrast);">Our Simple Hiring Process</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 15px auto 0 auto; line-height: 1.6;">Follow these four simple steps to join our team of world-class AI and Machine Learning experts. Our entire candidate experience is completed in exactly <strong style="color: var(--primary);">20 days</strong> from application to final offer.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Feedback Section -->
-    <section class="feedback-section">
-        <div class="container">
-            <div class="feedback-card">
-                <p>"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour predefined words which don't look."</p>
-                <div class="client-info">
-                    <img class="client-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&width=100" alt="Filip Luis">
-                    <div class="client-details">
-                        <h3>Filip Luis</h3>
-                        <span>Founder & CEO</span>
+            
+            <div class="process-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
+                <!-- Step 1 -->
+                <div class="process-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 40px 30px; text-align: center; position: relative; transition: all 0.3s ease; overflow: hidden;">
+                    <div class="step-number" style="font-size: 72px; font-weight: 800; color: rgba(255, 107, 53, 0.08); position: absolute; top: -10px; right: 20px; font-family: var(--font-heading);">01</div>
+                    <div class="icon-box" style="width: 70px; height: 70px; background: rgba(255, 107, 53, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px auto; color: var(--primary); font-size: 24px;">
+                        <i class="fa-solid fa-file-invoice"></i>
                     </div>
+                    <h3 style="font-family: var(--font-heading); font-size: 20px; color: var(--text-contrast); margin-bottom: 15px;">Apply Online</h3>
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin: 0;">Submit your application and portfolio matching your skills and experience.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 40px 30px; text-align: center; position: relative; transition: all 0.3s ease; overflow: hidden;">
+                    <div class="step-number" style="font-size: 72px; font-weight: 800; color: rgba(255, 107, 53, 0.08); position: absolute; top: -10px; right: 20px; font-family: var(--font-heading);">02</div>
+                    <div class="icon-box" style="width: 70px; height: 70px; background: rgba(255, 107, 53, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px auto; color: var(--primary); font-size: 24px;">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); font-size: 20px; color: var(--text-contrast); margin-bottom: 15px;">Technical Review</h3>
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin: 0;">Complete a remote technical assessment tailored to your core role.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 40px 30px; text-align: center; position: relative; transition: all 0.3s ease; overflow: hidden;">
+                    <div class="step-number" style="font-size: 72px; font-weight: 800; color: rgba(255, 107, 53, 0.08); position: absolute; top: -10px; right: 20px; font-family: var(--font-heading);">03</div>
+                    <div class="icon-box" style="width: 70px; height: 70px; background: rgba(255, 107, 53, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px auto; color: var(--primary); font-size: 24px;">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); font-size: 20px; color: var(--text-contrast); margin-bottom: 15px;">HR & Tech Interview</h3>
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin: 0;">Discuss technical architectures with tech leads and culture/benefits with HR partners.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 40px 30px; text-align: center; position: relative; transition: all 0.3s ease; overflow: hidden;">
+                    <div class="step-number" style="font-size: 72px; font-weight: 800; color: rgba(255, 107, 53, 0.08); position: absolute; top: -10px; right: 20px; font-family: var(--font-heading);">04</div>
+                    <div class="icon-box" style="width: 70px; height: 70px; background: rgba(255, 107, 53, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px auto; color: var(--primary); font-size: 24px;">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); font-size: 20px; color: var(--text-contrast); margin-bottom: 15px;">Get Hired</h3>
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin: 0;">Receive an offer and begin onboarding into our collaborative workspace.</p>
+                </div>
+            </div>
+            
+            <!-- HR Connect CTA Banner -->
+            <div class="hr-cta" style="margin-top: 50px; background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%); border: 1px solid rgba(255, 107, 53, 0.2); border-radius: 16px; padding: 30px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                <div class="hr-cta-text" style="max-width: 600px; text-align: left;">
+                    <h4 style="font-family: var(--font-heading); font-size: 20px; color: var(--text-contrast); margin-bottom: 8px;">Connect with our HR Department</h4>
+                    <p style="color: var(--text-muted); font-size: 14px; margin: 0; line-height: 1.5;">Have questions about open roles, benefits, or the interviewing process? Drop us a line at <strong style="color: var(--primary);">hr@vjaysoftware.com</strong>.</p>
+                </div>
+                <div class="hr-cta-btn">
+                    <a class="btn btn-primary" href="mailto:hr@vjaysoftware.com" style="padding: 12px 25px;">Contact HR</a>
                 </div>
             </div>
         </div>
+        
+        <style>
+            .process-card:hover {
+                transform: translateY(-8px);
+                background: rgba(255, 255, 255, 0.05) !important;
+                border-color: var(--primary) !important;
+                box-shadow: 0 10px 30px rgba(255, 107, 53, 0.15);
+            }
+        </style>
     </section>
+
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing-section">

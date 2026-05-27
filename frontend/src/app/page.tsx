@@ -170,7 +170,6 @@ export default function Home() {
     <>
       <nav>
         <a href="#home" className="nav-logo">
-          <div className="nav-logo-box">V</div>
           <div className="nav-logo-text">
             VJAY <span>SOFTWARE</span>
           </div>
@@ -402,6 +401,7 @@ export default function Home() {
                     <li>Dedicated Development Teams</li>
                     <li>Embedded Software Services</li>
                     <li>Mobile Apps Development Services</li>
+                    <li>Python & Django Development Services</li>
                   </ul>
                 </div>
                 <div className="category-group">
@@ -524,6 +524,10 @@ export default function Home() {
                 {
                   title: "DevOps Engineer",
                   meta: "Docker · CI/CD · 3+ yrs · Full-time · Remote",
+                },
+                {
+                  title: "Backend Engineer",
+                  meta: "Python · Django · 4+ yrs · Full-time · Hybrid",
                 },
               ].map((job) => (
                 <div
@@ -842,21 +846,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PARTNERS SECTION */}
-      <section className="partners-section">
-        <div className="container">
-          <div className="section-tag">Network & Alliances</div>
-          <h2 className="section-title">OUR PARTNERSHIPS</h2>
-          <div className="partners-grid">
-            {["Microsoft", "Google Cloud", "AWS", "Databricks", "Red Hat", "Elastic", "Snowflake", "Cisco"].map((p, i) => (
-              <div key={i} className="partner-logo">
-                {p}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FOOTER */}
       <footer className="main-footer">
         <div className="container">
@@ -866,7 +855,7 @@ export default function Home() {
                 VJAY<span>.</span>SOFTWARE
               </div>
               <p className="footer-brand-desc">
-                Engineering excellence for the world's most ambitious companies.
+                Engineering excellence for the world's most ambitious companies.<br />
                 Based in India, serving global innovators since 2013.
               </p>
             </div>

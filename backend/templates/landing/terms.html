@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - VjaySoftware AI</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style for Terms & Conditions -->
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --primary-rgb: 255, 107, 53;
+            --secondary: #6366f1;
+            --background-dark: #080b11;
+            --background-card: rgba(255, 255, 255, 0.03);
+            --text-contrast: #ffffff;
+            --text-muted: #8a99ad;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--background-dark);
+            color: var(--text-contrast);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 80px 0;
+        }
+
+        /* Ambient Glow Backgrounds */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(140px);
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .glow-1 {
+            top: -10%;
+            left: -10%;
+            width: 45vw;
+            height: 45vw;
+            background: radial-gradient(circle, rgba(var(--primary-rgb), 0.3) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        .glow-2 {
+            bottom: -15%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        /* Card Container */
+        .terms-container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            width: 90%;
+            background: var(--background-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-contrast);
+            text-decoration: none;
+            margin-bottom: 30px;
+            display: inline-block;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-contrast);
+        }
+
+        .last-updated {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-contrast);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 25px;
+            width: 100%;
+        }
+
+        .back-home:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+            .terms-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <div class="terms-container">
+        <a href="/" class="logo">Vjay<span>Software</span></a>
+        <h1>Terms & Conditions</h1>
+        <div class="last-updated">Last Updated: May 20, 2026</div>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using our websites, software, APIs, and ML diagnostics systems, you agree to comply with and be bound by these Terms & Conditions. If you do not agree, please do not access or use our services.</p>
+
+        <h2>2. Use of Services</h2>
+        <p>You agree to use VjaySoftware services strictly for lawful purposes. You must not use our software or ML platforms to:
+            <ul>
+                <li>Engage in any form of data harvesting or unauthorized scraping.</li>
+                <li>Attempt to bypass API access limits or safety guardrails.</li>
+                <li>Distribute malicious files, viruses, or computational exploits.</li>
+            </ul>
+        </p>
+
+        <h2>3. Intellectual Property</h2>
+        <p>All content, source code, logos, visual models, and trademark designs featured on our software platforms are the exclusive property of VjaySoftware or its respective licensors. You may not replicate, modify, or resell any part of our intellectual property without explicit authorization.</p>
+
+        <h2>4. Disclaimer of Warranties</h2>
+        <p>Our machine learning calculations, predictions, and project diagnostics models are provided on an "as-is" and "as-available" basis without any express warranties. We do not guarantee absolute system accuracy or error-free outputs.</p>
+
+        <h2>5. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, VjaySoftware will not be liable for any indirect, incidental, or consequential damages resulting from system usage, data downtime, or algorithmic decisions.</p>
+
+        <a href="/" class="back-home"><i class="fa-solid fa-arrow-left"></i> Back to Homepage</a>
+    </div>
+</body>
+</html>
